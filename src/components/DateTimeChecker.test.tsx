@@ -5,7 +5,7 @@ describe("validateDate", () => {
   const currentYear = new Date().getFullYear();
 
   it("should return null for a valid date", () => {
-    expect(validateDate("2023-02-29")).toBeNull();
+    expect(validateDate("2023-12-25")).toBeNull(); // ngày hợp lệ
   });
 
   it("should return an error message for an empty string", () => {
@@ -53,13 +53,13 @@ describe("validateDate", () => {
   });
 
   it("should return null for February 29th on a leap year", () => {
-    expect(validateDate("2024-02-30")).toBeNull(); // 2024 is a leap year
+    expect(validateDate("2024-02-29")).toBeNull(); // 2024 là năm nhuận
   });
 
   it("should return an error for February 29th on a non-leap year", () => {
     expect(validateDate("2023-02-29")).toBe(
       "Invalid day for the selected month."
-    ); // 2023 is not a leap year
+    ); // 2023 không phải năm nhuận
   });
 
   it("should return an error for April 31st", () => {
