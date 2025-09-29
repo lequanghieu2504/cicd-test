@@ -4,12 +4,12 @@ import { validateDate } from "./DateTimeChecker";
 describe("validateDate", () => {
   const currentYear = new Date().getFullYear();
 
-  it("should return null for a valid date", () => {
-    expect(validateDate("2023-10-26")).toBeNull();
+  it('should return null for a valid date', () => {
+    expect(validateDate('2023-02-28')).toBeNull();
   });
 
   it("should return an error message for an empty string", () => {
-    expect(validateDate("11111")).toBe("Date field cannot be empty.");
+    expect(validateDate("")).toBe("Date field cannot be empty.");
   });
 
   it("should return an error for year less than 1000", () => {
