@@ -5,7 +5,7 @@ describe("validateDate", () => {
   const currentYear = new Date().getFullYear();
 
   it("should return null for a valid date", () => {
-    expect(validateDate("2023-02-29")).toBeNull();
+    expect(validateDate("2023-02-28")).toBeNull();
   });
 
   it("should return an error message for an empty string", () => {
@@ -53,7 +53,7 @@ describe("validateDate", () => {
   });
 
   it("should return null for February 29th on a leap year", () => {
-    expect(validateDate("2024-02-30")).toBeNull(); // 2024 is a leap year
+    expect(validateDate("2024-02-29")).toBeNull(); // 2024 is a leap year
   });
 
   it("should return an error for February 29th on a non-leap year", () => {
