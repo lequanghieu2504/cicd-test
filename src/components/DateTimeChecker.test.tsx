@@ -5,7 +5,7 @@ describe("validateDate", () => {
   const currentYear = new Date().getFullYear();
 
   it("should return null for a valid date", () => {
-    expect(validateDate("2023-12-25")).toBeNull(); // ngày hợp lệ
+    expect(validateDate("2024-11-25")).toBeNull(); // ngày hợp lệ
   });
 
   it("should return an error message for an empty string", () => {
