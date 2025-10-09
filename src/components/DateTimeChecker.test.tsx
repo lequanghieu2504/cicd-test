@@ -13,7 +13,7 @@ describe("validateDate", () => {
   });
 
   it("should return an error for year less than 1000", () => {
-    expect(validateDate("1999-12-31")).toBe(
+    expect(validateDate("0999-12-31")).toBe(
       `Year must be between 1000 and ${currentYear}.`
     );
   });
@@ -53,7 +53,7 @@ describe("validateDate", () => {
   });
 
   it("should return null for February 29th on a leap year", () => {
-    expect(validateDate("2024-02-29")).toBeNull(); // 2024 is a leap year
+    expect(validateDate("2024-02-29")).toBeNull(); // 2024 là năm nhuận
   });
 
   it("should return an error for February 29th on a non-leap year", () => {
